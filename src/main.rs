@@ -16,6 +16,14 @@ fn padding_for_depth(depth: i32) -> String {
 }
 
 fn list_paths(path: String, depth: i32) {
+    let sub_paths = match fs::read_dir(&path) {
+        Result::Ok(value) => value,
+        Result::Err(_) => {
+            println!("{} is not a folder!", path.red());
+            return
+        }
+    };
+
     let folder_path = Path::new(&path);
     let folder_parent_path = folder_path.parent().unwrap();
     println!(
@@ -27,7 +35,6 @@ fn list_paths(path: String, depth: i32) {
     );
     let depth = depth + 1;
     
-    let sub_paths = fs::read_dir(&path).unwrap();
     for path in sub_paths {
         let path = format!("{}", path.unwrap().path().display());
         let metadata = fs::metadata(path.clone()).unwrap();
