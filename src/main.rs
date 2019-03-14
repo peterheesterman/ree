@@ -5,10 +5,14 @@ use std::path::Path;
 
 fn main() {
     let args: Vec<String> = env::args().collect();
-    let filename = &args[1];
-    // if there are too many arguments panic
 
-    list_paths(filename.to_string(), 0);
+    if args.len() == 1 {
+        println!("{}", "You need to specify one or more folder(s) to expand".yellow());
+    }
+
+    for arg in &args[1..] {
+        list_paths(arg.to_string(), 0);
+    }
 }
 
 fn padding_for_depth(depth: i32) -> String {
