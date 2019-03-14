@@ -1,5 +1,4 @@
 
 # todo list
 
- - if there are too many arguments panic
- - 
+ - figure out how to add good images to the docs
