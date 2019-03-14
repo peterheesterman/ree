@@ -1,8 +1,15 @@
 [package]
 name = "ree"
-version = "0.1.0"
+version = "0.0.1"
 authors = ["Peter Heesterman <heesterman.peter@gmail.com>"]
 edition = "2018"
+
+description = "Prints out depth-indented listing of files in a folder"
+repository = "https://github.com/peterheesterman/ree"
+readme = "./README.md"
+keywords = ["tree", "ree", "directory", "list"]
+categories = ["command-line-utilities"]
+license = "MIT"
 
 [dependencies]
 colored = "1.7"

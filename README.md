@@ -1,6 +1,6 @@
 
-# REE
+# Ree
 
-A simple version of the tree unix utility.
+A simplified version of the tree unix utility.
 
-Prints out depth-indented listing of files.
+Prints out depth-indented listing of files in a folder (or list of folders).
