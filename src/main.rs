@@ -1,10 +1,14 @@
 use std::fs;
+use std::env;
 use colored::*;
 use std::path::Path;
 
 fn main() {
-    let path = String::from("./test-folder");
-    list_paths(path, 0);
+    let args: Vec<String> = env::args().collect();
+    let filename = &args[1];
+    // if there are too many arguments panic
+
+    list_paths(filename.to_string(), 0);
 }
 
 fn padding_for_depth(depth: i32) -> String {
