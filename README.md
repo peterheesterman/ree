@@ -9,7 +9,7 @@ Prints out depth-indented listing of files in a folder (or list of folders).
 // Installation
 cargo install ree
 ```
-[https://github.com/peterheesterman/ree/blob/master/readme-images/install.png|alt=install]
+![Installation](./readme-images/install.png?raw=true "Installation")
 
 
 ```
