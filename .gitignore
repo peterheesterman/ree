@@ -2,3 +2,4 @@
 /test-folder
 **/*.rs.bk
 todo.md
+.DS_Store
